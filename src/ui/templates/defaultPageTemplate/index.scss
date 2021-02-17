@@ -1,0 +1,10 @@
+.default-page-template {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  .container {
+    flex: 1;
+  }
+}

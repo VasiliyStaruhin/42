@@ -1,0 +1,17 @@
+import {types} from 'mobx-state-tree';
+
+
+export const Loader = types.model('Loader', {
+    count: types.optional(types.number, 0)
+})
+    .actions(self => {
+        const show = () => self.count++;
+        const hide = () => self.count--;
+
+        return {show, hide};
+    })
+    .views(self => ({
+        isVisible() {
+            return self.count > 0;
+        }
+    }));

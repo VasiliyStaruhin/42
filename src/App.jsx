@@ -1,13 +1,21 @@
 import React from 'react';
+import {observer, inject, Provider} from 'mobx-react';
+
+import {Loader} from 'src/ui/atoms';
+import {Routing} from 'src/routing';
+
+import './index.scss';
 
 
-class App extends React.Component {
-    render() {
-        return(
-            <div>
-                13
-        </div>
+const App = ({store}) => {
+    const isAuthorized = store.auth.isAuthorized();
+
+    return (
+        <Provider store={store}>
+            <Routing isAuthorized={isAuthorized} />
+            <Loader />
+        </Provider>
     );
-    }
-}
-export default App
+};
+
+export default inject('store')(observer (App));

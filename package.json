@@ -7,20 +7,25 @@
   "author": "starukhin <vasyl.starukhin@onedome.com>",
   "license": "MIT",
   "scripts": {
-    "webpack-dev-server": "webpack-dev-server",
-    "dev": "webpack-cli serve --mode=development"
+    "init": "npm i",
+    "start": "webpack-cli serve --mode=development"
   },
   "dependencies": {
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
+    "core-js": "^3.8.3",
     "css-loader": "^5.0.2",
     "file-loader": "^6.2.0",
     "mobx": "^6.1.6",
+    "mobx-react": "^7.1.0",
     "mobx-state-tree": "^5.0.1",
-    "react": "^17.0.1",
+    "react": "^16.8.6",
     "react-bootstrap": "^1.4.3",
-    "react-dom": "^17.0.1",
+    "react-dom": "^16.8.6",
+    "react-medium-image-zoom": "^4.3.1",
+    "react-paginate": "^7.1.0",
     "react-router-dom": "^5.2.0",
+    "regenerator-runtime": "^0.13.7",
     "style-loader": "^2.0.0"
   },
   "devDependencies": {
@@ -31,6 +36,8 @@
     "babel-loader": "^8.2.2",
     "html-webpack-plugin": "^5.1.0",
     "path": "^0.12.7",
+    "sass": "^1.32.7",
+    "sass-loader": "^11.0.1",
     "webpack": "^5.21.2",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2"

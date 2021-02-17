@@ -19,6 +19,7 @@ module.exports = (env) => {
         devServer: {
             historyApiFallback: true,
             open: true,
+            compress: true,
             port: env.port || 3000
         },
         module: {
@@ -28,8 +29,12 @@ module.exports = (env) => {
                     use: 'babel-loader',
                 },
                 {
-                    test: /\.css$/,
-                    use: ['style-loader', 'css-loader'],
+                    test: /\.(css|scss)$/,
+                    use: [
+                        'style-loader',
+                        'css-loader',
+                        'sass-loader',
+                    ]
                 },
                 {
                     test: /\.(png|j?g|svg|gif)?$/,
